@@ -7,12 +7,12 @@ app.get("/", (req, res) => {
 });
 
 app.get("/add/:number/:additor", (req, res) => {
-  let result = parseInt(req.params.number) + parseInt(req.params.additor);
+  const result = parseInt(req.params.number, 10) + parseInt(req.params.additor, 10);
   res.send({ result }).status(200);
 });
 
 app.get("/substract/:number/:substractor", (req, res) => {
-  let result = parseInt(req.params.number) - parseInt(req.params.substractor);
+  const result = parseInt(req.params.number, 10) - parseInt(req.params.substractor, 10);
   res.send({ result }).status(200);
 });
 
